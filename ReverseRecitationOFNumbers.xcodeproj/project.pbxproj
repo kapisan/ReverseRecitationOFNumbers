@@ -13,6 +13,15 @@
 		79975F2726B5409A0037A693 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79975F2526B5409A0037A693 /* Main.storyboard */; };
 		79975F2926B5409C0037A693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79975F2826B5409C0037A693 /* Assets.xcassets */; };
 		79975F2C26B5409C0037A693 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79975F2A26B5409C0037A693 /* LaunchScreen.storyboard */; };
+		79975F4026B6C9810037A693 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79975F3726B6C9800037A693 /* 1.mp3 */; };
+		79975F4126B6C9810037A693 /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79975F3826B6C9800037A693 /* 3.mp3 */; };
+		79975F4226B6C9810037A693 /* 5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79975F3926B6C9800037A693 /* 5.mp3 */; };
+		79975F4326B6C9810037A693 /* 6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79975F3A26B6C9800037A693 /* 6.mp3 */; };
+		79975F4426B6C9810037A693 /* 7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79975F3B26B6C9800037A693 /* 7.mp3 */; };
+		79975F4526B6C9810037A693 /* 9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79975F3C26B6C9800037A693 /* 9.mp3 */; };
+		79975F4626B6C9810037A693 /* 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79975F3D26B6C9810037A693 /* 4.mp3 */; };
+		79975F4726B6C9810037A693 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79975F3E26B6C9810037A693 /* 2.mp3 */; };
+		79975F4826B6C9810037A693 /* 8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 79975F3F26B6C9810037A693 /* 8.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		79975F2826B5409C0037A693 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79975F2B26B5409C0037A693 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79975F2D26B5409C0037A693 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79975F3726B6C9800037A693 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		79975F3826B6C9800037A693 /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
+		79975F3926B6C9800037A693 /* 5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5.mp3; sourceTree = "<group>"; };
+		79975F3A26B6C9800037A693 /* 6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 6.mp3; sourceTree = "<group>"; };
+		79975F3B26B6C9800037A693 /* 7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 7.mp3; sourceTree = "<group>"; };
+		79975F3C26B6C9800037A693 /* 9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 9.mp3; sourceTree = "<group>"; };
+		79975F3D26B6C9810037A693 /* 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4.mp3; sourceTree = "<group>"; };
+		79975F3E26B6C9810037A693 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
+		79975F3F26B6C9810037A693 /* 8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +77,15 @@
 				79975F1F26B5409A0037A693 /* AppDelegate.swift */,
 				79975F2126B5409A0037A693 /* SceneDelegate.swift */,
 				79975F2326B5409A0037A693 /* ViewController.swift */,
+				79975F3726B6C9800037A693 /* 1.mp3 */,
+				79975F3E26B6C9810037A693 /* 2.mp3 */,
+				79975F3826B6C9800037A693 /* 3.mp3 */,
+				79975F3D26B6C9810037A693 /* 4.mp3 */,
+				79975F3926B6C9800037A693 /* 5.mp3 */,
+				79975F3A26B6C9800037A693 /* 6.mp3 */,
+				79975F3B26B6C9800037A693 /* 7.mp3 */,
+				79975F3F26B6C9810037A693 /* 8.mp3 */,
+				79975F3C26B6C9800037A693 /* 9.mp3 */,
 				79975F2526B5409A0037A693 /* Main.storyboard */,
 				79975F2826B5409C0037A693 /* Assets.xcassets */,
 				79975F2A26B5409C0037A693 /* LaunchScreen.storyboard */,
@@ -124,6 +151,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79975F4726B6C9810037A693 /* 2.mp3 in Resources */,
+				79975F4226B6C9810037A693 /* 5.mp3 in Resources */,
+				79975F4126B6C9810037A693 /* 3.mp3 in Resources */,
+				79975F4826B6C9810037A693 /* 8.mp3 in Resources */,
+				79975F4426B6C9810037A693 /* 7.mp3 in Resources */,
+				79975F4626B6C9810037A693 /* 4.mp3 in Resources */,
+				79975F4526B6C9810037A693 /* 9.mp3 in Resources */,
+				79975F4026B6C9810037A693 /* 1.mp3 in Resources */,
+				79975F4326B6C9810037A693 /* 6.mp3 in Resources */,
 				79975F2C26B5409C0037A693 /* LaunchScreen.storyboard in Resources */,
 				79975F2926B5409C0037A693 /* Assets.xcassets in Resources */,
 				79975F2726B5409A0037A693 /* Main.storyboard in Resources */,
