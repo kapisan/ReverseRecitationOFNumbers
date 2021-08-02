@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet private weak var displayLabel: UILabel!
     @IBOutlet private weak var answerTextField: UITextField!
 
-
     var audioPlayer: AVAudioPlayer!
     var number: Int = 0
     var reverseNumber: Int = 0
@@ -26,9 +25,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
+    }
+
+    @IBAction func startButtonAction(_ sender: Any) {
         randomNumberCreate()
         assetsNumberSound()
     }
+
 
     func randomNumberCreate() {
         numberArray = [1,2,3,4,5,6,7,8,9]
