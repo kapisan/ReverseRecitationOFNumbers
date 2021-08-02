@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
     @IBOutlet private weak var displayLabel: UILabel!
     @IBOutlet private weak var answerTextField: UITextField!
 
+
+    var audioPlayer: AVAudioPlayer!
     var number: Int = 0
     var reverseNumber: Int = 0
     var numberArray = [Int]()
@@ -24,6 +27,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         randomNumberCreate()
+        assetsNumberSound()
     }
 
     func randomNumberCreate() {
@@ -35,6 +39,15 @@ class ViewController: UIViewController {
 
         print(newNumberArray)
         print(correctAnswerArray)
+    }
+
+    func assetsNumberSound() {
+        guard let numberSoundFile = NSDataAsset(name: "1") else {
+            print("Not Found")
+            return
+        }
+        audioPlayer = try! AVAudioPlayer(data: numberSoundFile.data, fileTypeHint: "mp3")
+        audioPlayer.play()
     }
 }
 
