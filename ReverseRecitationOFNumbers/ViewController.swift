@@ -22,6 +22,9 @@ class ViewController: UIViewController {
     var correctAnswerArray = [Int]()
     var correctAnswer: Int = 0
 
+    var count = 0
+    var btnTimer: Timer!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,7 +33,8 @@ class ViewController: UIViewController {
 
     @IBAction func startButtonAction(_ sender: Any) {
         randomNumberCreate()
-        assetsNumberSound()
+//        assetsNumberSound()
+        startTimer()
     }
 
 
@@ -45,13 +49,39 @@ class ViewController: UIViewController {
         print(correctAnswerArray)
     }
 
-    func assetsNumberSound() {
-        guard let numberSoundFile = NSDataAsset(name: "1") else {
+    func assetsNumberSound(name: String) {
+        guard let numberSoundFile = NSDataAsset(name: name) else {
             print("Not Found")
             return
         }
         audioPlayer = try! AVAudioPlayer(data: numberSoundFile.data, fileTypeHint: "mp3")
         audioPlayer.play()
+    }
+
+    func startTimer() {
+        self.btnTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.changeSounds), userInfo: nil, repeats: true)
+    }
+
+    @objc func changeSounds() {
+        count += 1
+
+        switch count {
+        case 1:
+            assetsNumberSound(name: "1")
+        case 2:
+            assetsNumberSound(name: "2")
+        case 3:
+            assetsNumberSound(name: "3")
+        case 4:
+            assetsNumberSound(name: "4")
+        case 5:
+            assetsNumberSound(name: "5")
+        case 6:
+            count = 0
+            self.btnTimer.invalidate()
+        default:
+            print("対象外")
+        }
     }
 }
 
