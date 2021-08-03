@@ -8,10 +8,11 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet private weak var displayLabel: UILabel!
     @IBOutlet private weak var answerTextField: UITextField!
+
 
     var audioPlayer: AVAudioPlayer!
     var number: Int = 0
@@ -27,11 +28,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        //キーボードで数字と記号のみを表示
+        self.answerTextField.keyboardType = UIKeyboardType.numbersAndPunctuation
+
+        self.answerTextField.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
     }
 
     @IBAction func startButtonAction(_ sender: Any) {
+        //リセット
+        displayLabel.text = ""
+        answerTextField.text = ""
+
         randomNumberCreate()
 //        assetsNumberSound()
         startTimer()
@@ -60,6 +71,47 @@ class ViewController: UIViewController {
 
     func startTimer() {
         self.btnTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.changeSounds), userInfo: nil, repeats: true)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        let stringNumberArray = String(newNumberArray[0]) +  String(newNumberArray[1]) +  String(newNumberArray[2]) +  String(newNumberArray[3]) +  String(newNumberArray[4])
+        let stringNumberArrayInt = Int(stringNumberArray)
+
+        var answerInt = 0
+
+        if answerTextField.text != nil {
+            answerInt = Int(answerTextField.text!)!
+        }
+
+        if stringNumberArrayInt == answerInt {
+            displayLabel.text = "正解"
+
+        } else {
+            displayLabel.text = "不正解"
+        }
+
+        //キーボードを閉じる
+        textField.resignFirstResponder()
+
+        return true
+    }
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            } else {
+                let suggestionHeight = self.view.frame.origin.y + keyboardSize.height
+                self.view.frame.origin.y -= suggestionHeight
+            }
+        }
+    }
+
+    @objc func keyboardWillHide() {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
 
     @objc func changeSounds() {
