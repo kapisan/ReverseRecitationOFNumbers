@@ -68,7 +68,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="answerTextField" destination="51d-Kc-can" id="m7r-Ll-ily"/>
+                        <outlet property="answerTextField" destination="51d-Kc-can" id="Xcj-kf-hmS"/>
                         <outlet property="displayLabel" destination="0yY-J7-naK" id="HvA-VT-v8y"/>
                     </connections>
                 </viewController>
