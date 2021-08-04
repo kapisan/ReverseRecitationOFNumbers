@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet private weak var displayLabel: UILabel!
     @IBOutlet private weak var answerTextField: UITextField!
+    @IBOutlet private weak var titleLabel: UILabel!
 
 
     var audioPlayer: AVAudioPlayer!
@@ -28,6 +29,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        displayLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.adjustsFontSizeToFitWidth = true
 
         //キーボードで数字と記号のみを表示
         self.answerTextField.keyboardType = UIKeyboardType.numbersAndPunctuation
